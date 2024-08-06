@@ -1,0 +1,659 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.15.0",
+	"@generated": "Tue, 6 Aug 2024 20:58:29",
+	"site":[ 
+		{
+			"@name": "https://staging.dreamshop.honda.com",
+			"@host": "staging.dreamshop.honda.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-4",
+					"alert": "CSP: Wildcard Directive",
+					"name": "CSP: Wildcard Directive",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://service.force.com/embeddedservice/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/ https://payments.salesforce.com/ https://js.stripe.com/ https://www.paypal.com/sdk/js https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com import: blob: https://uip.canary.lwc.dev https://assets.adobedtm.com/4d2629481466/cd94f7cbfdd4/launch-e4d04f8e5abc-development.min.js https://staging.genuinehondaparts.honda.com https://www.acura.com https://automobiles.honda.com https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png https://www.somt.honda.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement.min.js https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement_Module_ActivityMap.min.js https://www.demdex.net https://www.tt.omtrdc.net https://tmd.sc.omtrdc.net/b/ss/tmd-web-retail-dev1/ https://code.jquery.com https://honda.demdex.net https://js.braintreegateway.com https://dev-dreamshop.devproxy.services.honda.com https://akamai-staging.dreamshop.honda.com/ https://americanhondamotors--dev.lightning.force.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com/jquery-3.6.0.slim.min.js https://checkout.paypal.com/ https://www.paypal.com/tagmanager/pptm.js https://assets.adobedtm.com https://dreamshop1.force.com/s/ https://americanhondamotors.lightning.force.com/ https://dreamshop.honda.com https://dreamshop1.honda.com https://americanhondamotors--dreamshop.my.salesforce.com https://upload.wikimedia.org/ https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com/gtag/js http://code.jquery.com/jquery-3.2.1.min.js https://activitymap.adobe.com/ https://*.qualtrics.com https://cdn.cookielaw.org/consent/f89db0bb-8bda-4d4b-b5ae-e73cc5b7a806-test/otSDKStub.js https://cdn.cookielaw.org/scripttemplates/202312.1.0/otBannerSdk.js; object-src 'self' www.google.com; style-src 'self' 'unsafe-inline' https://service.force.com/embeddedservice/ https://fonts.googleapis.com/css2 https://fonts.googleapis.com/css https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; img-src 'self' data: blob: https://americanhondamotors--dreamshop.sandbox.my.salesforce.com https://americanhondamotors--dreamshop.sandbox.file.force.com https://img.youtube.com https://i.ytimg.com https://i.vimeocdn.com https://login.salesforce.com/icons/ https://payments.salesforce.com/icons/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/icons/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/icons/ https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://www.sandbox.paypal.com https://www.paypal.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cs218.salesforce.com/icons/ *.force.com *.sfdcstatic.com *.salesforce.com *.salesforce.com:* *.my-salesforce.com *.my-salesforce-cms.com *.cloudinary.com *.salesforce-experience.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com dreamshop1.force.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://owners.honda.com https://owners.acura.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://staging.assets.powerequipment.honda.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com https://powersports.honda.com https://marine.honda.com; media-src 'self' blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; frame-src 'self' https://service.force.com/embeddedservice/ https://cs218.salesforce.com https://sfdc-link-preview-staging.sfdc.sh https://sfdc-link-preview.hk.salesforce.com https://cdn.embedly.com https://www.youtube.com https://player.vimeo.com https://play.vidyard.com https://player.cloudinary.com https://fast.wistia.net https://players.brightcove.net https://s1.adis.ws https://scormanywhere.secure.force.com https://appiniummastertrial.secure.force.com https://js.stripe.com/ https://www.paypal.com https://www.sandbox.paypal.com https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com https://*.b.forceusercontent.com/lightningmaps/ https://*.b.forceusercontent.com https://test-location.force.com https://americanhondamotors--dreamshop.sandbox.file.force.com *.force.com *.quip.com *.youtube-nocookie.com *.youtube.co.uk *.cybersource.com *.youtube.com.br *.youtube.es *.fast.wistia.net *.salesforce-experience.com *.salesforceliveagent.com *.i1.adis.ws *.sfdcfc.net *.youtube.ca *.players.brightcove.net *.youtube.ie *.bcove.video *.vidyard.com *.youtube.jp *.player.vimeo.com *.youtube.fr *.player.cloudinary.com *.forceusercontent.com *.youtube.com *.salesforce.com *.s1.adis.ws *.youtube.nl *.youtube.pl americanhondamotors--dreamshop.sandbox.my.salesforce.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://maps.a.forceusercontent.com https://*.paypal.com; font-src 'self' data: https://fonts.gstatic.com/ *.force.com *.salesforce.com blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; connect-src 'self' https://www.paypal.com https://www.sandbox.paypal.com https://americanhondamotors--dreamshop.sandbox.my.salesforce-scrt.com https://fonts.googleapis.com/css2 https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:\nform-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self'",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:\nscript-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "upgrade-insecure-requests",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:\nscript-src, style-src, img-src, connect-src, frame-src, frame-ancestors, font-src, media-src, object-src, manifest-src, worker-src, form-action\n\nThe directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined:</p><p>form-action</p><p></p><p>The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-10",
+					"alert": "CSP: script-src unsafe-eval",
+					"name": "CSP: script-src unsafe-eval",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://service.force.com/embeddedservice/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/ https://payments.salesforce.com/ https://js.stripe.com/ https://www.paypal.com/sdk/js https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com import: blob: https://uip.canary.lwc.dev https://assets.adobedtm.com/4d2629481466/cd94f7cbfdd4/launch-e4d04f8e5abc-development.min.js https://staging.genuinehondaparts.honda.com https://www.acura.com https://automobiles.honda.com https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png https://www.somt.honda.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement.min.js https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement_Module_ActivityMap.min.js https://www.demdex.net https://www.tt.omtrdc.net https://tmd.sc.omtrdc.net/b/ss/tmd-web-retail-dev1/ https://code.jquery.com https://honda.demdex.net https://js.braintreegateway.com https://dev-dreamshop.devproxy.services.honda.com https://akamai-staging.dreamshop.honda.com/ https://americanhondamotors--dev.lightning.force.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com/jquery-3.6.0.slim.min.js https://checkout.paypal.com/ https://www.paypal.com/tagmanager/pptm.js https://assets.adobedtm.com https://dreamshop1.force.com/s/ https://americanhondamotors.lightning.force.com/ https://dreamshop.honda.com https://dreamshop1.honda.com https://americanhondamotors--dreamshop.my.salesforce.com https://upload.wikimedia.org/ https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com/gtag/js http://code.jquery.com/jquery-3.2.1.min.js https://activitymap.adobe.com/ https://*.qualtrics.com https://cdn.cookielaw.org/consent/f89db0bb-8bda-4d4b-b5ae-e73cc5b7a806-test/otSDKStub.js https://cdn.cookielaw.org/scripttemplates/202312.1.0/otBannerSdk.js; object-src 'self' www.google.com; style-src 'self' 'unsafe-inline' https://service.force.com/embeddedservice/ https://fonts.googleapis.com/css2 https://fonts.googleapis.com/css https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; img-src 'self' data: blob: https://americanhondamotors--dreamshop.sandbox.my.salesforce.com https://americanhondamotors--dreamshop.sandbox.file.force.com https://img.youtube.com https://i.ytimg.com https://i.vimeocdn.com https://login.salesforce.com/icons/ https://payments.salesforce.com/icons/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/icons/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/icons/ https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://www.sandbox.paypal.com https://www.paypal.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cs218.salesforce.com/icons/ *.force.com *.sfdcstatic.com *.salesforce.com *.salesforce.com:* *.my-salesforce.com *.my-salesforce-cms.com *.cloudinary.com *.salesforce-experience.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com dreamshop1.force.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://owners.honda.com https://owners.acura.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://staging.assets.powerequipment.honda.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com https://powersports.honda.com https://marine.honda.com; media-src 'self' blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; frame-src 'self' https://service.force.com/embeddedservice/ https://cs218.salesforce.com https://sfdc-link-preview-staging.sfdc.sh https://sfdc-link-preview.hk.salesforce.com https://cdn.embedly.com https://www.youtube.com https://player.vimeo.com https://play.vidyard.com https://player.cloudinary.com https://fast.wistia.net https://players.brightcove.net https://s1.adis.ws https://scormanywhere.secure.force.com https://appiniummastertrial.secure.force.com https://js.stripe.com/ https://www.paypal.com https://www.sandbox.paypal.com https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com https://*.b.forceusercontent.com/lightningmaps/ https://*.b.forceusercontent.com https://test-location.force.com https://americanhondamotors--dreamshop.sandbox.file.force.com *.force.com *.quip.com *.youtube-nocookie.com *.youtube.co.uk *.cybersource.com *.youtube.com.br *.youtube.es *.fast.wistia.net *.salesforce-experience.com *.salesforceliveagent.com *.i1.adis.ws *.sfdcfc.net *.youtube.ca *.players.brightcove.net *.youtube.ie *.bcove.video *.vidyard.com *.youtube.jp *.player.vimeo.com *.youtube.fr *.player.cloudinary.com *.forceusercontent.com *.youtube.com *.salesforce.com *.s1.adis.ws *.youtube.nl *.youtube.pl americanhondamotors--dreamshop.sandbox.my.salesforce.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://maps.a.forceusercontent.com https://*.paypal.com; font-src 'self' data: https://fonts.gstatic.com/ *.force.com *.salesforce.com blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; connect-src 'self' https://www.paypal.com https://www.sandbox.paypal.com https://americanhondamotors--dreamshop.sandbox.my.salesforce-scrt.com https://fonts.googleapis.com/css2 https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com",
+							"otherinfo": "script-src includes unsafe-eval."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-eval.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-5",
+					"alert": "CSP: script-src unsafe-inline",
+					"name": "CSP: script-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://service.force.com/embeddedservice/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/ https://payments.salesforce.com/ https://js.stripe.com/ https://www.paypal.com/sdk/js https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com import: blob: https://uip.canary.lwc.dev https://assets.adobedtm.com/4d2629481466/cd94f7cbfdd4/launch-e4d04f8e5abc-development.min.js https://staging.genuinehondaparts.honda.com https://www.acura.com https://automobiles.honda.com https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png https://www.somt.honda.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement.min.js https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement_Module_ActivityMap.min.js https://www.demdex.net https://www.tt.omtrdc.net https://tmd.sc.omtrdc.net/b/ss/tmd-web-retail-dev1/ https://code.jquery.com https://honda.demdex.net https://js.braintreegateway.com https://dev-dreamshop.devproxy.services.honda.com https://akamai-staging.dreamshop.honda.com/ https://americanhondamotors--dev.lightning.force.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com/jquery-3.6.0.slim.min.js https://checkout.paypal.com/ https://www.paypal.com/tagmanager/pptm.js https://assets.adobedtm.com https://dreamshop1.force.com/s/ https://americanhondamotors.lightning.force.com/ https://dreamshop.honda.com https://dreamshop1.honda.com https://americanhondamotors--dreamshop.my.salesforce.com https://upload.wikimedia.org/ https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com/gtag/js http://code.jquery.com/jquery-3.2.1.min.js https://activitymap.adobe.com/ https://*.qualtrics.com https://cdn.cookielaw.org/consent/f89db0bb-8bda-4d4b-b5ae-e73cc5b7a806-test/otSDKStub.js https://cdn.cookielaw.org/scripttemplates/202312.1.0/otBannerSdk.js; object-src 'self' www.google.com; style-src 'self' 'unsafe-inline' https://service.force.com/embeddedservice/ https://fonts.googleapis.com/css2 https://fonts.googleapis.com/css https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; img-src 'self' data: blob: https://americanhondamotors--dreamshop.sandbox.my.salesforce.com https://americanhondamotors--dreamshop.sandbox.file.force.com https://img.youtube.com https://i.ytimg.com https://i.vimeocdn.com https://login.salesforce.com/icons/ https://payments.salesforce.com/icons/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/icons/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/icons/ https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://www.sandbox.paypal.com https://www.paypal.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cs218.salesforce.com/icons/ *.force.com *.sfdcstatic.com *.salesforce.com *.salesforce.com:* *.my-salesforce.com *.my-salesforce-cms.com *.cloudinary.com *.salesforce-experience.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com dreamshop1.force.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://owners.honda.com https://owners.acura.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://staging.assets.powerequipment.honda.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com https://powersports.honda.com https://marine.honda.com; media-src 'self' blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; frame-src 'self' https://service.force.com/embeddedservice/ https://cs218.salesforce.com https://sfdc-link-preview-staging.sfdc.sh https://sfdc-link-preview.hk.salesforce.com https://cdn.embedly.com https://www.youtube.com https://player.vimeo.com https://play.vidyard.com https://player.cloudinary.com https://fast.wistia.net https://players.brightcove.net https://s1.adis.ws https://scormanywhere.secure.force.com https://appiniummastertrial.secure.force.com https://js.stripe.com/ https://www.paypal.com https://www.sandbox.paypal.com https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com https://*.b.forceusercontent.com/lightningmaps/ https://*.b.forceusercontent.com https://test-location.force.com https://americanhondamotors--dreamshop.sandbox.file.force.com *.force.com *.quip.com *.youtube-nocookie.com *.youtube.co.uk *.cybersource.com *.youtube.com.br *.youtube.es *.fast.wistia.net *.salesforce-experience.com *.salesforceliveagent.com *.i1.adis.ws *.sfdcfc.net *.youtube.ca *.players.brightcove.net *.youtube.ie *.bcove.video *.vidyard.com *.youtube.jp *.player.vimeo.com *.youtube.fr *.player.cloudinary.com *.forceusercontent.com *.youtube.com *.salesforce.com *.s1.adis.ws *.youtube.nl *.youtube.pl americanhondamotors--dreamshop.sandbox.my.salesforce.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://maps.a.forceusercontent.com https://*.paypal.com; font-src 'self' data: https://fonts.gstatic.com/ *.force.com *.salesforce.com blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; connect-src 'self' https://www.paypal.com https://www.sandbox.paypal.com https://americanhondamotors--dreamshop.sandbox.my.salesforce-scrt.com https://fonts.googleapis.com/css2 https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self'",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "upgrade-insecure-requests",
+							"otherinfo": "script-src includes unsafe-inline."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-inline.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://service.force.com/embeddedservice/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/ https://payments.salesforce.com/ https://js.stripe.com/ https://www.paypal.com/sdk/js https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com import: blob: https://uip.canary.lwc.dev https://assets.adobedtm.com/4d2629481466/cd94f7cbfdd4/launch-e4d04f8e5abc-development.min.js https://staging.genuinehondaparts.honda.com https://www.acura.com https://automobiles.honda.com https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1200px-No_image_available.svg.png https://www.somt.honda.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement.min.js https://assets.adobedtm.com/extensions/EPbde2f7ca14e540399dcc1f8208860b7b/AppMeasurement_Module_ActivityMap.min.js https://www.demdex.net https://www.tt.omtrdc.net https://tmd.sc.omtrdc.net/b/ss/tmd-web-retail-dev1/ https://code.jquery.com https://honda.demdex.net https://js.braintreegateway.com https://dev-dreamshop.devproxy.services.honda.com https://akamai-staging.dreamshop.honda.com/ https://americanhondamotors--dev.lightning.force.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com/jquery-3.6.0.slim.min.js https://checkout.paypal.com/ https://www.paypal.com/tagmanager/pptm.js https://assets.adobedtm.com https://dreamshop1.force.com/s/ https://americanhondamotors.lightning.force.com/ https://dreamshop.honda.com https://dreamshop1.honda.com https://americanhondamotors--dreamshop.my.salesforce.com https://upload.wikimedia.org/ https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com/gtag/js http://code.jquery.com/jquery-3.2.1.min.js https://activitymap.adobe.com/ https://*.qualtrics.com https://cdn.cookielaw.org/consent/f89db0bb-8bda-4d4b-b5ae-e73cc5b7a806-test/otSDKStub.js https://cdn.cookielaw.org/scripttemplates/202312.1.0/otBannerSdk.js; object-src 'self' www.google.com; style-src 'self' 'unsafe-inline' https://service.force.com/embeddedservice/ https://fonts.googleapis.com/css2 https://fonts.googleapis.com/css https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; img-src 'self' data: blob: https://americanhondamotors--dreamshop.sandbox.my.salesforce.com https://americanhondamotors--dreamshop.sandbox.file.force.com https://img.youtube.com https://i.ytimg.com https://i.vimeocdn.com https://login.salesforce.com/icons/ https://payments.salesforce.com/icons/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/icons/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/icons/ https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://www.sandbox.paypal.com https://www.paypal.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cs218.salesforce.com/icons/ *.force.com *.sfdcstatic.com *.salesforce.com *.salesforce.com:* *.my-salesforce.com *.my-salesforce-cms.com *.cloudinary.com *.salesforce-experience.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com dreamshop1.force.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://owners.honda.com https://owners.acura.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://staging.assets.powerequipment.honda.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com https://powersports.honda.com https://marine.honda.com; media-src 'self' blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://hondaracing-us.honda.com https://hpd.honda.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; frame-src 'self' https://service.force.com/embeddedservice/ https://cs218.salesforce.com https://sfdc-link-preview-staging.sfdc.sh https://sfdc-link-preview.hk.salesforce.com https://cdn.embedly.com https://www.youtube.com https://player.vimeo.com https://play.vidyard.com https://player.cloudinary.com https://fast.wistia.net https://players.brightcove.net https://s1.adis.ws https://scormanywhere.secure.force.com https://appiniummastertrial.secure.force.com https://js.stripe.com/ https://www.paypal.com https://www.sandbox.paypal.com https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com https://*.b.forceusercontent.com/lightningmaps/ https://*.b.forceusercontent.com https://test-location.force.com https://americanhondamotors--dreamshop.sandbox.file.force.com *.force.com *.quip.com *.youtube-nocookie.com *.youtube.co.uk *.cybersource.com *.youtube.com.br *.youtube.es *.fast.wistia.net *.salesforce-experience.com *.salesforceliveagent.com *.i1.adis.ws *.sfdcfc.net *.youtube.ca *.players.brightcove.net *.youtube.ie *.bcove.video *.vidyard.com *.youtube.jp *.player.vimeo.com *.youtube.fr *.player.cloudinary.com *.forceusercontent.com *.youtube.com *.salesforce.com *.s1.adis.ws *.youtube.nl *.youtube.pl americanhondamotors--dreamshop.sandbox.my.salesforce.com https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://crmshonda--sfull.sandbox.my.salesforce-sites.com https://maps.a.forceusercontent.com https://*.paypal.com; font-src 'self' data: https://fonts.gstatic.com/ *.force.com *.salesforce.com blob: https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://www.paypal.com https://*.paypal.com https://www.youtube.com; connect-src 'self' https://www.paypal.com https://www.sandbox.paypal.com https://americanhondamotors--dreamshop.sandbox.my.salesforce-scrt.com https://fonts.googleapis.com/css2 https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://origin-analytics-sand.sandbox.braintree-api.com https://payments.sandbox.braintree-api.com https://api.sandbox.braintreegateway.com https://js.braintreegateway.com https://assets.braintreegateway.com https://fonts.googleapis.com https://akamai-staging.dreamshop.honda.com https://code.jquery.com https://somt.honda.com https://fonts.gstatic.com https://americanhondamotors.lightning.force.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://dreamshop.honda.com https://dreamshop1.honda.com https://assets.adobedtm.com https://americanhondamotors--dev.my.salesforce.com https://*.acura.com https://reserve.acura.com https://t.co https://*.linkedin.com https://p.tvpixel.com https://live.rezync.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://automobiles.honda.com https://www.handsfreelink.com https://powerequipment.honda.com https://acura.americanhondafinance.com https://honda.americanhondafinance.com https://*.onelink-translations.com https://staging2.powerequipment.honda.com https://cdnapisec.kaltura.com https://www.kaltura.com https://play.google.com *.qualtrics.com *.adobedtm.com https://www.gstatic.com https://activitymap.adobe.com https://*.salesforceliveagent.com https://preprodpublic.blob.core.windows.net https://cdn.cookielaw.org https://cookie-cdn.cookiepro.com https://privacyportal.onetrust.com https://geolocation.onetrust.com https://acuracertified-stage.aecloud.io https://acuracertified-preprod.aecloud.io https://hondacertified-preprod.aecloud.io https://hondacertified-stage.aecloud.io https://sjc1.qualtrics.com https://siteintercept.qualtrics.com https://s.qualtrics.com https://acura.com https://honda.com https://staging.communication.honda.com https://www.paypalobjects.com https://crmshonda--genaipoc.sandbox.my.site.com https://crmshonda--genaipoc.sandbox.my.salesforce-scrt.com https://cdnjs.cloudflare.com https://dev.dreamshop.honda.com https://techmarketingdemos.tt.omtrdc.net https://techmarketingdemos.demdex.net https://honda.demdex.net https://dpm.demdex.net https://www.acura.com https://www.omt.honda.com https://www.sc.omtrdc.net https://www.2o7.net https://www.demdex.net https://www.somt.honda.com https://www.tt.omtrdc.net https://cm.everesttech.net https://staging.genuinehondaparts.honda.com https://*.google.com https://p.rfihub.com https://p.adsymptotic.com https://i.liadm.com https://maps.a.forceusercontent.com https://*.paypal.com https://www.youtube.com",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "upgrade-insecure-requests",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10098",
+					"alertRef": "10098",
+					"alert": "Cross-Domain Misconfiguration",
+					"name": "Cross-Domain Misconfiguration",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22fwuid%22%3A%22MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22apce%22%3A1%2C%22apck%22%3A%22JHt0aW1lc3RhbXB9MDAwMDAwMDAwNDJlbl9VUw%22%2C%22mlr%22%3A1%2C%22pathPrefix%22%3A%22%22%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/bootstrap.js?aura.attributes=%7B%22ac%22%3A%22%22%2C%22authenticated%22%3A%22false%22%2C%22brandingSetId%22%3A%2223dffc71-5f49-4d11-9a66-92969f97d253%22%2C%22formFactor%22%3A%22LARGE%22%2C%22isHybrid%22%3A%22false%22%2C%22language%22%3A%22en_US%22%2C%22pageId%22%3A%2244f1cfad-3e57-4bd8-8742-fcb1fe28e028%22%2C%22publishedChangelistNum%22%3A%22175%22%2C%22schema%22%3A%22Published%22%2C%22themeLayoutType%22%3A%22ilkRNxfQIPjD5XhRJe2HR1c3SkbWDS%22%2C%22uds%22%3A%22false%22%2C%22viewType%22%3A%22Published%22%7D",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22fwuid%22%3A%22MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22apce%22%3A1%2C%22apck%22%3A%22JHt0aW1lc3RhbXB9MDAwMDAwMDAwNDJlbl9VUw%22%2C%22mlr%22%3A1%2C%22pathPrefix%22%3A%22%22%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/resources.js?pu=1&pv=17227509860001885079726&rv=1722438857000",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22styleContext%22%3A%7B%22c%22%3A%22webkit%22%2C%22x%22%3A%5B%22SLDS%22%2C%22isDesktop%22%5D%2C%22tokens%22%3A%5B%22markup%3A%2F%2Fsiteforce%3AserializedTokens%22%2C%22markup%3A%2F%2Fforce%3AsldsTokens%22%2C%22markup%3A%2F%2Fsiteforce%3AcommunityTokens%22%2C%22markup%3A%2F%2Fforce%3AformFactorLarge%22%2C%22markup%3A%2F%2Fsiteforce%3AcommunityFormFactorLarge%22%2C%22markup%3A%2F%2Fsiteforce%3AauraDynamicTokens%22%2C%22markup%3A%2F%2Fsiteforce%3AsldsFontOverride%22%5D%2C%22tuid%22%3A%22r7V_XWiDsyoOnLXX3I7iiA%22%2C%22cuid%22%3A1022378793%7D%2C%22pathPrefix%22%3A%22%22%7D/app.css?2=&aura.attributes=%7B%22ac%22%3A%22%22%2C%22authenticated%22%3A%22false%22%2C%22brandingSetId%22%3A%2223dffc71-5f49-4d11-9a66-92969f97d253%22%2C%22formFactor%22%3A%22LARGE%22%2C%22isHybrid%22%3A%22false%22%2C%22language%22%3A%22en_US%22%2C%22pageId%22%3A%2244f1cfad-3e57-4bd8-8742-fcb1fe28e028%22%2C%22publishedChangelistNum%22%3A%22175%22%2C%22schema%22%3A%22Published%22%2C%22themeLayoutType%22%3A%22ilkRNxfQIPjD5XhRJe2HR1c3SkbWDS%22%2C%22uds%22%3A%22false%22%2C%22viewType%22%3A%22Published%22%7D",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						}
+					],
+					"count": "5",
+					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
+					"reference": "<p>https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</p>",
+					"cweid": "264",
+					"wascid": "14",
+					"sourceid": "18"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "CookieConsentPolicy",
+							"attack": "",
+							"evidence": "Set-Cookie: CookieConsentPolicy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "LSKey-c$CookieConsentPolicy",
+							"attack": "",
+							"evidence": "Set-Cookie: LSKey-c$CookieConsentPolicy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "renderCtx",
+							"attack": "",
+							"evidence": "Set-Cookie: renderCtx",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "Set-Cookie: sfdc-stream",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "Set-Cookie: sfdc-stream",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054-2",
+					"alert": "Cookie with SameSite Attribute None",
+					"name": "Cookie with SameSite Attribute None",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set with its SameSite attribute set to \"none\", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "CookieConsentPolicy",
+							"attack": "",
+							"evidence": "Set-Cookie: CookieConsentPolicy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "LSKey-c$CookieConsentPolicy",
+							"attack": "",
+							"evidence": "Set-Cookie: LSKey-c$CookieConsentPolicy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "renderCtx",
+							"attack": "",
+							"evidence": "Set-Cookie: renderCtx",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "Set-Cookie: sfdc-stream",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "Set-Cookie: sfdc-stream",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "https://assets.adobedtm.com/4d2629481466/cd94f7cbfdd4/launch-c54837bb1123-staging.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://assets.adobedtm.com/4d2629481466/cd94f7cbfdd4/launch-c54837bb1123-staging.min.js\" async></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-12",
+					"alert": "CSP: Header & Meta",
+					"name": "CSP: Header & Meta",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>The message contained both CSP specified via header and via Meta tag. It was not possible to union these policies in order to perform an analysis. Therefore, they have been evaluated individually.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script nonce=\"CXryWmSfDagOkrkl0AFRAY5sPx760jGk\" >\n(function () {\n// lwcRuntimeFlags initialization\nif (!window.lwcRuntimeFlags)\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "db",
+							"otherinfo": "The following pattern was used: \\bDB\\b and was detected 31 times, the first in the element starting with: \"   */(n);if(e=`${e}`,jd.has(n)||\"\"===e||\"undefined\"===e||\"null\"===e)return o(se.createScriptURL(e)),e;const r=Le(Ea,n,[]),i=Ic(e\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "DEBUG",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected in the element starting with: \"(e.push(a[t]),h[f]={position:t,isEvent:m}):k[t]=q;e.length?(f=$A.get(Nr),f.ka({names:e}),f.$c(this,function(){var a,c;for(c in h\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 23 times, the first in the element starting with: \"this.Aura=this.Aura||{},this.Aura.Engine=function(e){\"use strict\";const t=[\"ariaActiveDescendant\",\"ariaAtomic\",\"ariaAutoComplete\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later",
+							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected in the element starting with: \"Zh=\"ClientService.processResponses\",$h=\"ClientService.receive\",ai=\"ClientService.send\",bi=\"Communication error, please retry or \", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 6 times, the first in the element starting with: \"  */function _l(e,t){if(_(e))return null;const n=xl(e,!0),l=t;for(let e,t,r,o,a=0;a<l.length;a++){if(e=l[a],r=e instanceof Windo\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"_toConsumableArray(I),_toConsumableArray(M))),za=Object.seal(Object.create(null,{tagNameCheck:{writable:!0,configurable:!1,enume\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected 2 times, the first in the element starting with: \"/*! version: 0.21.9 */const le=[\"isFinite\",\"isNaN\",\"parseFloat\",\"parseInt\",\"decodeURI\",\"decodeURIComponent\",\"encodeURI\",\"encodeU\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where",
+							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"Sn=\"Unable to find action '\",Tn=\"Unable to get value for key '\",Un=\"Unable to parse JSON response:\",Vn=\"Unable to parse action p\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22fwuid%22%3A%22MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22apce%22%3A1%2C%22apck%22%3A%22JHt0aW1lc3RhbXB9MDAwMDAwMDAwNDJlbl9VUw%22%2C%22mlr%22%3A1%2C%22pathPrefix%22%3A%22%22%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/bootstrap.js?aura.attributes=%7B%22ac%22%3A%22%22%2C%22authenticated%22%3A%22false%22%2C%22brandingSetId%22%3A%2223dffc71-5f49-4d11-9a66-92969f97d253%22%2C%22formFactor%22%3A%22LARGE%22%2C%22isHybrid%22%3A%22false%22%2C%22language%22%3A%22en_US%22%2C%22pageId%22%3A%2244f1cfad-3e57-4bd8-8742-fcb1fe28e028%22%2C%22publishedChangelistNum%22%3A%22175%22%2C%22schema%22%3A%22Published%22%2C%22themeLayoutType%22%3A%22ilkRNxfQIPjD5XhRJe2HR1c3SkbWDS%22%2C%22uds%22%3A%22false%22%2C%22viewType%22%3A%22Published%22%7D",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "xxx",
+							"otherinfo": "The following pattern was used: \\bXXX\\b and was detected in the element starting with: \"window.Aura.appBootstrap = {\"data\":{\"app\":{\"componentDef\":{\"descriptor\":\"markup://siteforce:communityApp\"},\"creationPath\":\"/*[0]\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 2 times, the first in the element starting with: \"a.superRerender();b.addContextClassName(a,c[0]);return c}},unrender:function(a,b){b.unregisterActionTargets(a);a.superUnrender()\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected 45 times, the first in the element starting with: \"\"object\"===typeof l&&!(l instanceof Array)?l:{},h):h)}}return e};this._warn=function(){q(\"warn\",arguments)};this._info=function(\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 16 times, the first in the element starting with: \"g;return new c};g.RequestTransport=function(){function e(d){for(;0<n.length;){var b=n[0],h=b[0],b=b[1];if(h.url===d.url&&h.sync=\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 3 times, the first in the element starting with: \"[\"query\",7],[\"fragment\",9]];return{parse:function(b,c){c=c||{};var a=null,e=m.exec(b);if(e){for(var a={},d=0;d<k.length;++d)a[k[\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 28 times, the first in the element starting with: \"$A.componentService.addLibraryExporter(\"js://force.util.focusUtil\",function(){/*$A.componentService.addLibraryInclude(\"js://forc\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "User",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 27 times, the first in the element starting with: \"l),d[l]);$A.util.isEmpty(n)||n.forEach(function(a){e.push(l+\".\"+a)})}}else e.push(g),delete h[l]}}return e};b._doNotShrinkHacks=\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where",
+							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"a.getElement();if(c){var d=$A.util.hasClass(c,\"panelActive\");if(\"focus\"==b.type&&!d)$A.util.addClass(c,\"panelActive\"),this.fmLib\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "XXX",
+							"otherinfo": "The following pattern was used: \\bXXX\\b and was detected 2 times, the first in the element starting with: \"computeTextWidth:function(a,b){try{var c=document.createElement(\"canvas\").getContext(\"2d\");c.font=b;var d=c.measureText(\"XXX\"+a+\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "18",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script nonce=\"CXryWmSfDagOkrkl0AFRAY5sPx760jGk\" ></p><p>(function () {</p><p>// lwcRuntimeFlags initialization</p><p>if (!window.lwcRuntimeFlags)\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"dismissError\" class=\"close\">\u00D7</a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "1",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "renderCtx",
+							"attack": "",
+							"evidence": "%7B%22pageId%22%3A%2244f1cfad-3e57-4bd8-8742-fcb1fe28e028%22%2C%22schema%22%3A%22Published%22%2C%22viewType%22%3A%22Published%22%2C%22brandingSetId%22%3A%2223dffc71-5f49-4d11-9a66-92969f97d253%22%2C%22audienceIds%22%3A%22%22%7D",
+							"otherinfo": "\ncookie:renderCtx"
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/auraFW/javascript/MTlpRlBKWTh5V3VoZVJjLURPWjQ0d2hZX25NdHFVdGpDN3BnWlROY1ZGT3cyNTAuOC4zLTYuNC41/aura_prod.js",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "!yyyEGOoKEseEfml+joFf/0BkwhloAv3N9OJnznq4TaLK4C5n3Z3GF3D3KSvGuD0g10hEyAvcQLtzKBQ=",
+							"otherinfo": "\ncookie:sfdc-stream"
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "!7BZr2E92GDUjU9aEEIFvGJYe2oMZFR1xD65t5oShNavZYubl8ZwIPDJgnBWIbJ8xAe5bVKCklXp0kGY=",
+							"otherinfo": "\ncookie:sfdc-stream"
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/",
+							"method": "GET",
+							"param": "renderCtx",
+							"attack": "",
+							"evidence": "%7B%22pageId%22%3A%2244f1cfad-3e57-4bd8-8742-fcb1fe28e028%22%2C%22schema%22%3A%22Published%22%2C%22viewType%22%3A%22Published%22%2C%22brandingSetId%22%3A%2223dffc71-5f49-4d11-9a66-92969f97d253%22%2C%22audienceIds%22%3A%22%22%7D",
+							"otherinfo": "\ncookie:renderCtx"
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/orderlookup",
+							"method": "GET",
+							"param": "renderCtx",
+							"attack": "",
+							"evidence": "%7B%22pageId%22%3A%2244f1cfad-3e57-4bd8-8742-fcb1fe28e028%22%2C%22schema%22%3A%22Published%22%2C%22viewType%22%3A%22Published%22%2C%22brandingSetId%22%3A%2223dffc71-5f49-4d11-9a66-92969f97d253%22%2C%22audienceIds%22%3A%22%22%7D",
+							"otherinfo": "\ncookie:renderCtx"
+						},
+						{
+							"uri": "https://staging.dreamshop.honda.com/s/sfsites/l/%7B%22mode%22%3A%22PROD%22%2C%22cac%22%3A0%2C%22app%22%3A%22siteforce%3AcommunityApp%22%2C%22serializationVersion%22%3A%221-250.8.3-6.4.5-b%22%2C%22parts%22%3A%22f%22%2C%22loaded%22%3A%7B%22APPLICATION%40markup%3A%2F%2Fsiteforce%3AcommunityApp%22%3A%22vgD8vvaBHzgKYqb_JQjQdw%22%7D%2C%22dns%22%3A%22c%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22-386269907%22%7D/app.js?2=",
+							"method": "GET",
+							"param": "sfdc-stream",
+							"attack": "",
+							"evidence": "!7BZr2E92GDUjU9aEEIFvGJYe2oMZFR1xD65t5oShNavZYubl8ZwIPDJgnBWIbJ8xAe5bVKCklXp0kGY=",
+							"otherinfo": "\ncookie:sfdc-stream"
+						}
+					],
+					"count": "6",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:renderCtx</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "9"
+				}
+			]
+		}
+	]
+}
